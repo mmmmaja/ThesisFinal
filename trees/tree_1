@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="TwoClass_y <= 1.5\nsamples = 100.0%\nvalue = [0.333, 0.323, 0.343]\nclass = Fast Decliner", fillcolor="#fdfcff"] ;
+1 [label="VSEADSSNADWVTK <= 23.693\nsamples = 54.4%\nvalue = [0.0, 0.346, 0.654]\nclass = Fast Decliner", fillcolor="#c4a2f3"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="ESTLHLVLR <= 34.962\nsamples = 39.7%\nvalue = [0.0, 0.15, 0.85]\nclass = Fast Decliner", fillcolor="#975cea"] ;
+1 -> 2 ;
+3 [label="samples = 29.4%\nvalue = [0.0, 0.0, 1.0]\nclass = Fast Decliner", fillcolor="#8139e5"] ;
+2 -> 3 ;
+4 [label="PE_15_MHDA_18_2_ <= 5.114\nsamples = 10.3%\nvalue = [0.0, 0.75, 0.25]\nclass = Slow Decliner", fillcolor="#7beeab"] ;
+2 -> 4 ;
+5 [label="samples = 7.4%\nvalue = [0.0, 1.0, 0.0]\nclass = Slow Decliner", fillcolor="#39e581"] ;
+4 -> 5 ;
+6 [label="samples = 2.9%\nvalue = [0.0, 0.0, 1.0]\nclass = Fast Decliner", fillcolor="#8139e5"] ;
+4 -> 6 ;
+7 [label="samples = 14.7%\nvalue = [0.0, 1.0, 0.0]\nclass = Slow Decliner", fillcolor="#39e581"] ;
+1 -> 7 ;
+8 [label="PC_18_1_20_3_ <= 11.015\nsamples = 45.6%\nvalue = [0.702, 0.298, 0.0]\nclass = Stable", fillcolor="#f0b68d"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="LVVSQLNPYTLR <= 21.6\nsamples = 13.2%\nvalue = [0.071, 0.929, 0.0]\nclass = Slow Decliner", fillcolor="#48e78b"] ;
+8 -> 9 ;
+10 [label="samples = 1.5%\nvalue = [1.0, 0.0, 0.0]\nclass = Stable", fillcolor="#e58139"] ;
+9 -> 10 ;
+11 [label="samples = 11.8%\nvalue = [0.0, 1.0, 0.0]\nclass = Slow Decliner", fillcolor="#39e581"] ;
+9 -> 11 ;
+12 [label="AGEQDATIHLK <= 28.853\nsamples = 32.4%\nvalue = [0.97, 0.03, 0.0]\nclass = Stable", fillcolor="#e6853f"] ;
+8 -> 12 ;
+13 [label="samples = 1.5%\nvalue = [0.0, 1.0, 0.0]\nclass = Slow Decliner", fillcolor="#39e581"] ;
+12 -> 13 ;
+14 [label="samples = 30.9%\nvalue = [1.0, 0.0, 0.0]\nclass = Stable", fillcolor="#e58139"] ;
+12 -> 14 ;
+}
