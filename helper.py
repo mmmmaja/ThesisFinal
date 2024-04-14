@@ -6,7 +6,7 @@ import pandas as pd
 from imblearn.over_sampling import SMOTE
 from matplotlib import pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, accuracy_score, recall_score, precision_score, \
-    f1_score
+    f1_score, roc_curve, auc
 from sklearn.preprocessing import StandardScaler
 
 path = "C:/Users/mjgoj/Desktop/THESIS/data/final_dataset_split.xlsx"
@@ -32,6 +32,23 @@ def plot_confusion_matrix(y_test_, y_prediction_):
         labels = ["Stable", "Slow Decliner", "Fast Decliner"]
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
     disp.plot(cmap="GnBu")
+    plt.show()
+
+
+def plot_ROC_curve(Y_pred, Y_test, X_test):
+    # Calculate the ROC curve
+    fpr, tpr, thresholds = roc_curve(Y_test, Y_pred)
+    roc_auc = auc(fpr, tpr)
+
+    plt.figure()
+    plt.plot(fpr, tpr, color='darkorange', lw=1, label='ROC curve (area = %0.2f)' % roc_auc)
+    plt.plot([0, 1], [0, 1], color='navy', lw=1, linestyle='--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('ROC Curve')
+    plt.legend(loc="lower right")
     plt.show()
 
 

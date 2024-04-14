@@ -19,7 +19,7 @@
 * Lipidomics - need to find correct names first (reach out to Valentin)
 
 Tasks:
-* PLS vs logistic regression
+* ~~PLS vs logistic regression~~
 * sPLS vs lasso / elastic net
 * **concatenated sPLS vs Diablo**
 * Tune PLS-DA model
