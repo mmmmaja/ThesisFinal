@@ -1,0 +1,6 @@
+,Method,F1,MCC,Number of Features
+0,ANOVA,0.819,0.541,111
+1,MIFS,0.823,0.577,556
+2,RFE,0.799,0.535,1000
+3,Boruta Method,0.43,-0.297,2
+4,None,0.799,0.535,1112
