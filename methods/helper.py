@@ -16,7 +16,8 @@ This file contains helper methods and plotting methods that are used in the main
 """
 
 # Load the data (it will be used by different functions)
-dataset_path = os.path.join('..', 'data', 'final_dataset_split.xls')
+# dataset_path = os.path.join('..', 'data', 'final_dataset_split.xlsx')
+dataset_path = "C:/Users/mjgoj/PycharmProjects/ThesisFinal/data/final_dataset_split.xlsx"
 xls = pd.ExcelFile(dataset_path)
 
 lipidomics = pd.read_excel(xls, "Lipidomics")
@@ -35,10 +36,12 @@ OMICS_PALETTE = {
 }
 
 # Read the conversion path for the metabolite and protein names
-protein_conversion_path = os.path.join('..', 'data', 'proteomics_conversion.xlsx')
+# protein_conversion_path = os.path.join('..', 'data', 'proteomics_conversion.xlsx')
+protein_conversion_path = 'C:/Users/mjgoj/PycharmProjects/ThesisFinal/data/proteomics_conversion.xlsx'
 protein_conversion = pd.read_excel(protein_conversion_path, sheet_name="Transitions")
 
-metabolite_conversion_path = os.path.join('..', 'data', 'metabolomics_conversion.xlsx')
+# metabolite_conversion_path = os.path.join('..', 'data', 'metabolomics_conversion.xlsx')
+metabolite_conversion_path = 'C:/Users/mjgoj/PycharmProjects/ThesisFinal/data/metabolomics_conversion.xlsx'
 metabolite_conversion = pd.read_excel(metabolite_conversion_path, sheet_name="Metabolomics")
 # Add new column for the metabolite name in the conversion table
 metabolite_conversion["UPPER_NAME"] = metabolite_conversion["NAME"].str.upper()
@@ -319,7 +322,8 @@ def get_train_test_split_RIDs():
     Get the RIDs of the training and testing set from the file
     :return: the RIDs of the training and testing set
     """
-    RID_path = os.path.join('..', 'data', 'RIDs.txt')
+    # RID_path = os.path.join('..', 'data', 'RIDs.txt')
+    RID_path = 'C:/Users/mjgoj/PycharmProjects/ThesisFinal/data/RIDs.txt'
     with open(RID_path, "r") as file:
         lines = file.readlines()
         training_RIDs = lines[1].split(",")

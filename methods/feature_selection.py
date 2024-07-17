@@ -82,7 +82,7 @@ def recursive_feature_elimination(X_, Y_, keep_ratio=0.8, estimator=DecisionTree
     """
     Wrapper approach to feature selection
     Starts with all features and removes the least important one at each iteration
-    :param k: number of features to select
+    :param keep_ratio: number of features to select
     :param X_: the feature matrix
     :param Y_: the class labels
     :param keep_ratio: the ratio of features to keep
@@ -100,6 +100,7 @@ def recursive_feature_elimination(X_, Y_, keep_ratio=0.8, estimator=DecisionTree
     features = X_.columns[selector.get_support()]
     # print("Number of features after recursive feature elimination ", len(features))
     return features
+
 
 def boruta_filtering(X_, Y_, keep_ratio=0.8):
     """
